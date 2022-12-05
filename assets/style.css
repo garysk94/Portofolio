@@ -1,0 +1,247 @@
+/* body style */
+body {
+    background-image: url(./pics/baackround\ \(johannes-plenio\).jpg);
+    background-size: cover;
+    display:inline;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+h1{
+    color: rgba(255, 255, 255, 0.781);
+    text-shadow: 10px 10px 10px ;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-size-adjust: 100px;
+} 
+
+/* style and animation of navigation bar and avatar  */
+
+#avatar{
+  height:300px;
+padding-left: 800px;
+padding-top: 2cm;
+}
+
+.btn{
+  background-color: var(--background-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+  padding: 2rem 3rem;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  --background-color: rgba(8, 86, 163, 0.781);
+  --border-size: 2px;
+  
+}
+
+.btn.btn-border::before{
+  content: '';
+  position: absolute;
+  border-radius: 40px;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  z-index: -1;
+  border: var(--border-size) solid var(--background-color);
+  transition: top, left, right, bottom, 300ms ease-in-out;
+}
+
+
+.btn.btn-border:hover::before,
+.btn.btn-border:focus::before {
+  top: calc(var(--border-size) * -4);
+  left: calc(var(--border-size) * -4) ;
+  right: calc(var(--border-size) * -4);
+  bottom: calc(var(--border-size) * -4);
+  border-radius: 40px;
+
+}
+
+.navbar{
+  display: inline;
+  padding-left: 15cm;
+  margin-left: 80px;
+}
+
+/*styles the About Me Section*/
+
+h2{
+margin-left: 10px;
+font-family: 'Courier New', Courier, monospace;
+}
+  #aboutme{
+  margin-top: 20px;
+  margin-right: 10cm;
+  width: 40%;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  background-color: rgba(8, 86, 163, 0.781);
+  color: white;
+  border-radius: 40px;
+  line-height: 20px;
+  align-content:flex-start;
+  margin-left: 14cm;
+  text-align: auto;
+  font-size: larger;
+  font-style: oblique;
+  font-family:'Courier New', Courier, monospace;
+}
+
+/*styles the My Wrok Section*/
+
+  #myWork{
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    background-color: rgba(8, 86, 163, 0.781);
+    color: white;
+    border-radius: 40px;
+    line-height: 20px;
+    margin-left: 14cm;
+    font-size: larger;
+    font-style: oblique;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+#wicons{
+  padding-left: 200px;
+}
+  /*styles the Socials Section*/
+
+  #socials{
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    background-color: rgba(8, 86, 163, 0.781);
+    color: white;
+    border-radius: 40px;
+    line-height: 20px;
+    margin-left: 14cm;
+    font-size: larger;
+    font-style: oblique;
+    font-family:'Courier New', Courier, monospace;
+  }
+ 
+  #sicons{
+    padding-left: 100px;
+    width: fit-content 40px;
+  }
+
+/* Tablet responsiveness */
+
+@media screen and (max-width: 768px){
+
+  h1{
+    font-size: xx-large;
+    text-align: right;
+    
+  }
+
+body{
+  flex-direction: column;
+  flex-wrap:wrap-reverse;
+  width: 100%;
+  background-attachment: fixed;
+  content: normal;
+
+ }
+ .navbar{
+  flex-direction:wrap;
+  padding-right: 50px;
+  text-align: left;
+  float: right;
+ }
+  #aboutme{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px
+  }
+  #myWork{
+    flex-direction:column;
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px
+  }
+  #socials {
+    flex-direction: column;
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px
+   
+  } 
+}
+
+   /* Smartphone responsiveness */
+
+@media screen and (max-width: 576px){
+  h1{
+    font-size: xx-large;
+    text-align: right;
+  }
+
+body{
+  flex-direction: column;
+  flex-wrap:wrap-reverse;
+  width: 100%;
+  background-attachment: fixed;
+  content: normal;
+
+ }
+ .navbar{
+  flex-direction:wrap;
+  padding-right: 50px;
+  text-align: left;
+  float: right;
+ }
+  #aboutme{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px
+  }
+  #myWork{
+    flex-direction:unset;
+    width: 80%;
+    text-align: left;
+  }
+  #socials {
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+  } 
+}
+
